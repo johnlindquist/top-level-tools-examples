@@ -1,5 +1,9 @@
 package
 {
+	import $.execute;
+	import $.mapSingleton;
+
+	import $MVC.mapMediator;
 
 	import flash.display.Sprite;
 
@@ -14,12 +18,12 @@ package
 	{
 		public function HelloFlash()
 		{
-			$mapSingleton(StatsModel);
+			mapSingleton(StatsModel);
 
-			$mapMediator(this, Ball, BallMediator);
-			$mapMediator(this, Readout, ReadoutMediator);
+			mapMediator(this, Ball, BallMediator);
+			mapMediator(this, Readout, ReadoutMediator);
 
-			$execute(StartupCommand);
+			execute(StartupCommand);
 		}
 	}
 }

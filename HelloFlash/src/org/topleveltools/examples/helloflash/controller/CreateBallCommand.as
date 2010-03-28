@@ -1,5 +1,7 @@
 package org.topleveltools.examples.helloflash.controller
 {
+	import $.getContext;
+
 	import org.topleveltools.examples.helloflash.view.Ball;
 
 	public class CreateBallCommand
@@ -9,7 +11,7 @@ package org.topleveltools.examples.helloflash.controller
 			var ball:Ball = new Ball();
 			ball.x = Math.random() * 500;
 			ball.y = Math.random() * 375;
-			$getContext(Ball).addChild(ball);
+			getContext(Ball).addChild(ball);
 		}
 	}
 }

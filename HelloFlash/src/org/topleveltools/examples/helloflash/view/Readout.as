@@ -2,6 +2,7 @@ package org.topleveltools.examples.helloflash.view
 {
 	import flash.display.Sprite;
 	import flash.text.TextField;
+	import flash.text.TextFieldAutoSize;
 
 	public class Readout extends Sprite
 	{
@@ -9,7 +10,8 @@ package org.topleveltools.examples.helloflash.view
 
 		public function Readout()
 		{
-			textField = new TextField()
+			textField = new TextField();
+			textField.autoSize = TextFieldAutoSize.LEFT;
 			addChild(textField);
 		}
 
