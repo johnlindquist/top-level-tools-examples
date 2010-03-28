@@ -15,16 +15,15 @@ package org.topleveltools.examples.helloflash.view
 			$mapCallback(CreateBallCommand, onBallCreated);
 		}
 
-		private function onBallCreated():void
-		{
-			Ball(view).poke();
-		}
-
 		protected function onClick(e:MouseEvent):void
 		{
 			statsModel.recordBallClick();
 			$execute(CreateBallCommand);
-
+		}
+		
+		private function onBallCreated():void
+		{
+			Ball(view).poke();
 		}
 	}
 }
