@@ -1,16 +1,20 @@
 package org.topleveltools.examples.helloflash.view
 {
+	import org.topleveltools.examples.helloflash.controller.CreateBallCommand;
 	import org.topleveltools.examples.helloflash.model.StatsModel;
 
-	public class ReadoutMediator
+	public class ReadoutMediator extends $Mediator
 	{
-		public var view:Readout = $getView(ReadoutMediator) as Readout;
-
 		public var statsModel:StatsModel = $getInstance(StatsModel);
 
-		public function ReadoutMediator()
+		override public function onRegister():void
 		{
-			
+			$mapCallback(CreateBallCommand, onBallCreated);
+		}
+
+		private function onBallCreated():void
+		{
+			Readout(view).setText('Click count: ' + statsModel.ballClickCount);
 		}
 	}
 }

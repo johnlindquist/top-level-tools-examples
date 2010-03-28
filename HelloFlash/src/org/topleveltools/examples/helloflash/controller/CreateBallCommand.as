@@ -1,7 +1,5 @@
 package org.topleveltools.examples.helloflash.controller
 {
-	import flash.display.Sprite;
-
 	import org.topleveltools.examples.helloflash.view.Ball;
 
 	public class CreateBallCommand

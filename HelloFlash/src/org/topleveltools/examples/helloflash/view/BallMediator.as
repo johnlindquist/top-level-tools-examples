@@ -11,15 +11,20 @@ package org.topleveltools.examples.helloflash.view
 
 		override public function onRegister():void
 		{
-			view.addEventListener(MouseEvent.CLICK, onClick)
+			view.addEventListener(MouseEvent.CLICK, onClick);
+			$mapCallback(CreateBallCommand, onBallCreated);
+		}
+
+		private function onBallCreated():void
+		{
+			Ball(view).poke();
 		}
 
 		protected function onClick(e:MouseEvent):void
 		{
-			trace("clicked");
-
 			statsModel.recordBallClick();
-			$execute(CreateBallCommand)
+			$execute(CreateBallCommand);
+
 		}
 	}
 }
