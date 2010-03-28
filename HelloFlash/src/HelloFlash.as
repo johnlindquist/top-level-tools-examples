@@ -2,24 +2,21 @@ package
 {
 
 	import flash.display.Sprite;
-	import flash.text.TextField;
+
+	import org.topleveltools.examples.helloflash.controller.CreateBallCommand;
+	import org.topleveltools.examples.helloflash.model.StatsModel;
+	import org.topleveltools.examples.helloflash.view.Ball;
+	import org.topleveltools.examples.helloflash.view.BallMediator;
 
 	public class HelloFlash extends Sprite
 	{
-		private var textField:TextField;
 		public function HelloFlash()
 		{
-			textField = new TextField();
-			textField.text = "Hello, World";
-			addChild(textField);
+			$mapSingleton(StatsModel)
 
-			$addEnterFrameCallback(onEnterFrame);
-			$startEnterFrame();
-		}
+			$mapMediator(this, Ball, BallMediator);
 
-		private function onEnterFrame():void
-		{
-			textField.text = Math.random().toString();
+			$execute(CreateBallCommand);
 		}
 	}
 }
