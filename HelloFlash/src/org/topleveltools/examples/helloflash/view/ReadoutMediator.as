@@ -1,10 +1,10 @@
 package org.topleveltools.examples.helloflash.view
 {
-	import $Get.getInstance;
+	import top.get.getInstance;
 
-	import $Mediator.Mediator;
+	import top.mediator.Mediator;
 
-	import $Observer.observe;
+	import top.observer.observe;
 
 	import org.topleveltools.examples.helloflash.model.MessageVO;
 	import org.topleveltools.examples.helloflash.model.StatsModel;

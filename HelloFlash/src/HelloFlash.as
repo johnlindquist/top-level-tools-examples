@@ -1,11 +1,11 @@
 package
 {
-	import $Command.execute;
+	import top.command.execute;
 
-	import $Map.mapCommand;
-	import $Map.mapMediator;
-	import $Map.mapSingleton;
-	import $Map.mapValue;
+	import top.map.mapCommand;
+	import top.map.mapMediator;
+	import top.map.mapSingleton;
+	import top.map.mapValue;
 
 	import flash.display.Sprite;
 
