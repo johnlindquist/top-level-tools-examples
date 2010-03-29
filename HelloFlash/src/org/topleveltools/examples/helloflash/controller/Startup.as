@@ -1,10 +1,10 @@
 package org.topleveltools.examples.helloflash.controller
 {
-	import top.get.getValue;
+	import tools.get.getValue;
 
-	import top.command.execute;
+	import tools.command.execute;
 
-	import top.observer.notify;
+	import tools.observer.notify;
 
 	import flash.display.Sprite;
 
@@ -18,7 +18,7 @@ package org.topleveltools.examples.helloflash.controller
 		public function execute():void
 		{
 			container.addChild(new Readout());
-			top.command.execute(CreateBall);
+			tools.command.execute(CreateBall);
 			notify(new MessageVO("App started. Now click on that ball already!"));
 		}
 	}

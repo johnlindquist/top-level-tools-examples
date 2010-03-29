@@ -1,12 +1,12 @@
 package org.topleveltools.examples.helloflash.view
 {
-	import top.command.execute;
+	import tools.command.execute;
 
-	import top.get.getInstance;
+	import tools.get.getInstance;
 
-	import top.map.mapCallback;
+	import tools.map.mapCallback;
 
-	import top.mediator.Mediator;
+	import tools.mediator.Mediator;
 
 	import flash.events.MouseEvent;
 

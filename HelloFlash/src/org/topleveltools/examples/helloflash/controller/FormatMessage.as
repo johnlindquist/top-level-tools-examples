@@ -1,8 +1,8 @@
 package org.topleveltools.examples.helloflash.controller
 {
-	import top.get.getInstance;
+	import tools.get.getInstance;
 
-	import top.observer.notify;
+	import tools.observer.notify;
 
 	import org.topleveltools.examples.helloflash.model.MessageVO;
 	import org.topleveltools.examples.helloflash.model.StatsModel;

@@ -1,6 +1,6 @@
 package org.topleveltools.examples.helloflash.controller
 {
-	import top.get.getValue;
+	import tools.get.getValue;
 
 	import flash.display.Sprite;
 
