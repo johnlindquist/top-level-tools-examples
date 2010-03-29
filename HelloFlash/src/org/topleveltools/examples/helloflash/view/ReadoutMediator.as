@@ -1,11 +1,12 @@
 package org.topleveltools.examples.helloflash.view
 {
-	import $.getInstance;
-	import $.mapCallback;
+	import $Get.getInstance;
 
-	import $MVC.Mediator;
+	import $Mediator.Mediator;
 
-	import org.topleveltools.examples.helloflash.controller.CreateBallCommand;
+	import $Observer.observe;
+
+	import org.topleveltools.examples.helloflash.model.MessageVO;
 	import org.topleveltools.examples.helloflash.model.StatsModel;
 
 	public class ReadoutMediator extends Mediator
@@ -14,12 +15,12 @@ package org.topleveltools.examples.helloflash.view
 
 		override public function onRegister():void
 		{
-			mapCallback(CreateBallCommand, onBallCreated);
+			observe(MessageVO, onBallCreated);
 		}
 
-		private function onBallCreated():void
+		private function onBallCreated(messageVO:MessageVO):void
 		{
-			Readout(view).setText('Click count: ' + statsModel.ballClickCount);
+			Readout(view).setText('Click count: ' + statsModel.ballClickCount + ' ' + messageVO.message);
 		}
 	}
 }

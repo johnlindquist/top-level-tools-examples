@@ -1,13 +1,17 @@
 package
 {
-	import $.execute;
-	import $.mapSingleton;
+	import $Command.execute;
 
-	import $MVC.mapMediator;
+	import $Map.mapCommand;
+	import $Map.mapMediator;
+	import $Map.mapSingleton;
+	import $Map.mapValue;
 
 	import flash.display.Sprite;
 
-	import org.topleveltools.examples.helloflash.controller.StartupCommand;
+	import org.topleveltools.examples.helloflash.controller.CreateBall;
+	import org.topleveltools.examples.helloflash.controller.FormatMessage;
+	import org.topleveltools.examples.helloflash.controller.Startup;
 	import org.topleveltools.examples.helloflash.model.StatsModel;
 	import org.topleveltools.examples.helloflash.view.Ball;
 	import org.topleveltools.examples.helloflash.view.BallMediator;
@@ -20,10 +24,15 @@ package
 		{
 			mapSingleton(StatsModel);
 
+			mapValue(HelloFlash, this);
+
 			mapMediator(this, Ball, BallMediator);
 			mapMediator(this, Readout, ReadoutMediator);
 
-			execute(StartupCommand);
+			mapCommand(CreateBall, CreateBall);
+			mapCommand(FormatMessage, FormatMessage);
+
+			execute(Startup);
 		}
 	}
 }
